@@ -40,9 +40,6 @@ namespace xeno_rat_server.Forms
             this.comboBoxSantander = new System.Windows.Forms.ComboBox();
             this.buttonFreezeSantander = new System.Windows.Forms.Button();
             this.buttonUnfreezeSantander = new System.Windows.Forms.Button();
-            this.comboBoxSantander = new System.Windows.Forms.ComboBox();
-            this.buttonFreezeSantander = new System.Windows.Forms.Button();
-            this.buttonUnfreezeSantander = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,6 +221,8 @@ namespace xeno_rat_server.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button buttonFreeze;
-        private System.Windows.Forms.Button buttonUnfreeze;
+        private System.Windows.Forms.ComboBox comboBoxSantander;
+        private System.Windows.Forms.Button buttonFreezeSantander;
+        private System.Windows.Forms.Button buttonUnfreezeSantander;
     }
 }

