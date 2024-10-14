@@ -37,8 +37,12 @@ namespace xeno_rat_server.Forms
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.buttonFreeze = new System.Windows.Forms.Button();
-            this.buttonUnfreeze = new System.Windows.Forms.Button();
+            this.comboBoxSantander = new System.Windows.Forms.ComboBox();
+            this.buttonFreezeSantander = new System.Windows.Forms.Button();
+            this.buttonUnfreezeSantander = new System.Windows.Forms.Button();
+            this.comboBoxSantander = new System.Windows.Forms.ComboBox();
+            this.buttonFreezeSantander = new System.Windows.Forms.Button();
+            this.buttonUnfreezeSantander = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +124,40 @@ namespace xeno_rat_server.Forms
             // buttonFreeze
             // 
             this.buttonFreeze.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonFreeze.Location = new System.Drawing.Point(174, 607);
+            // 
+            // comboBoxSantander
+            // 
+            this.comboBoxSantander.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxSantander.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSantander.FormattingEnabled = true;
+            this.comboBoxSantander.Items.AddRange(new object[] {
+            "Santander"});
+            this.comboBoxSantander.Location = new System.Drawing.Point(600, 609);
+            this.comboBoxSantander.Name = "comboBoxSantander";
+            this.comboBoxSantander.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSantander.TabIndex = 4;
+            // 
+            // buttonFreezeSantander
+            // 
+            this.buttonFreezeSantander.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonFreezeSantander.Location = new System.Drawing.Point(740, 607);
+            this.buttonFreezeSantander.Name = "buttonFreezeSantander";
+            this.buttonFreezeSantander.Size = new System.Drawing.Size(75, 23);
+            this.buttonFreezeSantander.TabIndex = 5;
+            this.buttonFreezeSantander.Text = "Executar Travamento";
+            this.buttonFreezeSantander.UseVisualStyleBackColor = true;
+            this.buttonFreezeSantander.Click += new System.EventHandler(this.buttonFreezeSantander_Click);
+            // 
+            // buttonUnfreezeSantander
+            // 
+            this.buttonUnfreezeSantander.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonUnfreezeSantander.Location = new System.Drawing.Point(830, 607);
+            this.buttonUnfreezeSantander.Name = "buttonUnfreezeSantander";
+            this.buttonUnfreezeSantander.Size = new System.Drawing.Size(75, 23);
+            this.buttonUnfreezeSantander.TabIndex = 6;
+            this.buttonUnfreezeSantander.Text = "Descongelar";
+            this.buttonUnfreezeSantander.UseVisualStyleBackColor = true;
+            this.buttonUnfreezeSantander.Click += new System.EventHandler(this.buttonUnfreezeSantander_Click);
             this.buttonFreeze.Name = "buttonFreeze";
             this.buttonFreeze.Size = new System.Drawing.Size(75, 23);
             this.buttonFreeze.TabIndex = 6;

